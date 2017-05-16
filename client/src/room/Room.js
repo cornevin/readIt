@@ -1,9 +1,7 @@
 import React, {Component} from 'react';
-import logo from './logo.svg';
-import './App.css';
 import CountdownTimer from './timer/Timer.js';
 
-class App extends Component {
+class Room extends Component {
 
     state = {users: []}
 
@@ -26,4 +24,4 @@ class App extends Component {
     }
 }
 
-export default App;
+export default Room;
