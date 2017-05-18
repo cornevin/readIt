@@ -4,8 +4,7 @@ import classnames from 'classnames';
 
 import './style.css';
 
-import AddTodo from '../addTodo';
-import VisibleTodoList from '../visibleTodoList'
+import Login from './Login';
 
 
 class App extends Component {
@@ -23,8 +22,7 @@ class App extends Component {
         <p className="App-intro">
           To get started, edit <code>src/App.js</code> and save to reload.
         </p>
-        <AddTodo />
-        <VisibleTodoList />
+        <Login/>
       </div>
     );
   }
