@@ -12,8 +12,6 @@ const getVisibleTodos = (todos) => {
 }
 
 const mapStateToProps = (state) => {
-  console.log('state : ');
-  console.log(state);
   return {
     todos: getVisibleTodos(state.todos)
   }

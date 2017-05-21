@@ -1,26 +1,30 @@
 import React from 'react'
 import { connect } from 'react-redux'
-import { addTodo } from '../actions';
+import { addTodo } from '../actions'
 
-let AddTodo = ({ dispatch }) => {
-  let input
+let AddTodo = ({ onSubmit }) => {
+  let email
+  let password
 
   return (
     <div>
       <form onSubmit={e => {
-        console.log(input)
         e.preventDefault()
-        if (!input.value.trim()) {
+        if (!email.value.trim() || !password.value.trim()) {
           return
         }
-        dispatch(addTodo(input.value))
-        input.value = ''
+        onSubmit(email.value, password.value)
+        email = ''
+        password = ''
       }}>
+
+        Email : 
         <input ref={node => {
-          input = node
+          email = node
         }} />
+        Password :
         <input ref={node => {
-          input = node
+          password = node
         }}/>
         <button type="submit">
           Add Todo

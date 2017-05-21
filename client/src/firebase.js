@@ -17,12 +17,16 @@ class FirebaseApi {
     });
   }
 
-  static createUserWithEmailAndPassword(user){
-    return firebase.auth().createUserWithEmailAndPassword(user.email, user.password);
+  static createUserWithEmailAndPassword(email, password){
+    console.log(email)
+    console.log(password)
+    var auth = firebase.auth();
+    console.log(auth)
+    return auth.createUserWithEmailAndPassword(email, password);
   }
 
-  static signInWithEmailAndPassword(user) {
-    return firebase.auth().signInWithEmailAndPassword(user.email, user.password);
+  static signInWithEmailAndPassword(email, password) {
+    return firebase.auth().signInWithEmailAndPassword(email, password);
   }
 
   static authSignOut(){
