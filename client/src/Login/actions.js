@@ -47,7 +47,6 @@ function extractUserProperties(firebaseUser) {
 
   const user = {};
   const userProperties = [
-    'displayName',
     'email',
     'refreshToken',
     'uid',

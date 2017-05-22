@@ -6,6 +6,8 @@ import './style.css';
 
 import Login from './Login';
 
+import MyRoute from './routes';
+
 
 class App extends Component {
   // static propTypes = {}
@@ -22,7 +24,7 @@ class App extends Component {
         <p className="App-intro">
           To get started, edit <code>src/App.js</code> and save to reload.
         </p>
-        <Login/>
+        <MyRoute/>
       </div>
     );
   }
