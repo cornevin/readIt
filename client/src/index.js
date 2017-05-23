@@ -12,8 +12,6 @@ import { BrowserRouter } from 'react-router-dom'
 
 import App from './App';
 
-import Routes from './routes';
-
 import './index.css';
 
 import FirebaseApi from './firebase';
@@ -44,9 +42,6 @@ FirebaseApi.initAuth()
 
       if (module.hot) {
         module.hot.accept('./App', () => {
-          // If you use Webpack 2 in ES modules mode, you can
-          // use <App /> here rather than require() a <NextApp />.
-          const NextApp = require('./App').default;
           ReactDOM.render(
               <Provider store={store}>
                 <BrowserRouter>

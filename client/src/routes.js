@@ -2,16 +2,17 @@
 import React from 'react';
 import { Switch, Route } from 'react-router-dom'
 
-import { BrowserRouter as Router } from 'react-router-dom';
-
 import App from './Login'
 import Room from './Room'
+
+import LoggedInRoute from './core/LoggedInRoute'
+
 
 
 const Routes = (props) => (
   <Switch>
     <Route exact path="/" component={App}/>
-    <Route exact path="/Room" component={Room}/>
+    <LoggedInRoute exact path="/Room" component={Room}/>
   </Switch>
 );
 

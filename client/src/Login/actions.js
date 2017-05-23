@@ -1,4 +1,3 @@
-import fetch from 'isomorphic-fetch'
 import firebase from '../firebase'
 
 let nextTodoId = 0
@@ -12,10 +11,8 @@ export const addTodo = (text) => {
 }
 
 export const submitLoginForm = (email, password) => {
-  console.log('YEAH')
   return (dispatch) => {
     // dispatch(requestPosts(subreddit)) TODO : Here should dispatch the fact a request is sent
-    console.log('derp')
     return firebase.createUserWithEmailAndPassword(email, password).then(user => {
       dispatch(userCreated(user))
     }).catch(error => {
@@ -25,7 +22,6 @@ export const submitLoginForm = (email, password) => {
 }
 
 export const userCreated = (user) => {
-  console.log(user.uid);
   return (dispatch) => {
     firebase.databaseSet('/users/' + user.uid, extractUserProperties(user))
       .then(() => {

@@ -2,10 +2,6 @@ import { connect } from 'react-redux'
 import { submitLoginForm } from '../actions'
 import LoginForm from './LoginForm';
 
-const mapStateToProps = (state) => {
-  return state;
-}
-
 const mapDispatchToProps = (dispatch) => {
     return {
       onSubmit: (email, password) => {
